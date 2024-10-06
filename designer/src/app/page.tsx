@@ -4,6 +4,7 @@ import NavCard from "@/components/nav-card";
 import NavHeader from "@/components/nav-header";
 import { Button } from "@/components/ui/button";
 import { TbBuildingCastle } from "react-icons/tb";
+import Loader from "@/components/loader";
 
 export default function Page() {
   return (
@@ -29,6 +30,8 @@ export default function Page() {
       >
         <NavHeader title={"Hrady"} onBack={() => alert("Ne hrady!!!")} />
       </div>
+      <h1>Loader</h1>
+      <Loader size="lg" />
     </div>
   );
 }

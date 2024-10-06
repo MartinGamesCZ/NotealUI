@@ -1,0 +1,18 @@
+{
+  "name": "loader",
+  "type": "registry:ui",
+  "registryDependencies": [],
+  "dependencies": [],
+  "devDependencies": [],
+  "tailwind": {
+    "config": {}
+  },
+  "cssVars": {},
+  "files": [
+    {
+      "path": "loader.tsx",
+      "type": "registry:ui",
+      "content": "export type LoaderSize = \"sm\" | \"md\" | \"lg\";\n\nconst sizes = {\n  sm: \"w-4 h-4\",\n  md: \"w-6 h-6\",\n  lg: \"w-8 h-8\",\n\n  borders: {\n    sm: \"border-2\",\n    md: \"border-4\",\n    lg: \"border-4\",\n  },\n};\n\nexport default function Loader({ size }: { size?: LoaderSize }) {\n  return (\n    <div className={sizes[size ?? \"md\"]}>\n      <div\n        className={\n          sizes[size ?? \"md\"] +\n          \" \" +\n          sizes.borders[size ?? \"md\"] +\n          \" border-l-primary border-t-primary border-r-accent border-b-accent rounded-full animate-spin\"\n        }\n      ></div>\n    </div>\n  );\n}\n"
+    }
+  ]
+}
