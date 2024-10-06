@@ -1,0 +1,20 @@
+{
+  "name": "nav-card",
+  "type": "registry:ui",
+  "registryDependencies": [],
+  "dependencies": [
+    "react-icons"
+  ],
+  "devDependencies": [],
+  "tailwind": {
+    "config": {}
+  },
+  "cssVars": {},
+  "files": [
+    {
+      "path": "nav-card.tsx",
+      "type": "registry:ui",
+      "content": "export default function NavCard({\n  icon: Icon,\n  label,\n  onClick,\n}: {\n  icon: (...props: any) => JSX.Element;\n  label: string;\n  onClick: () => void;\n}) {\n  return (\n    <div\n      onClick={onClick}\n      className={\"flex gap-4 items-center group cursor-pointer width-full\"}\n    >\n      <div\n        className={\n          \"rounded-md p-2 bg-primary/80 group-hover:bg-primary/40 transition-colors duration-200\"\n        }\n      >\n        <Icon\n          size={28}\n          className={\n            \"text-accent group-hover:text-primary/90 transition-colors duration-200\"\n          }\n          strokeWidth={1.5}\n        />\n      </div>\n      <p\n        className={\n          \"font-semibold text-lg text-foreground group-hover:text-primary/90 transitoin-colors duration-200\"\n        }\n      >\n        {label}\n      </p>\n    </div>\n  );\n}\n"
+    }
+  ]
+}
