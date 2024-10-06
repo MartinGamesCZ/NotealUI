@@ -1,6 +1,7 @@
 "use client";
 
 import NavCard from "@/components/nav-card";
+import NavHeader from "@/components/nav-header";
 import { Button } from "@/components/ui/button";
 import { TbBuildingCastle } from "react-icons/tb";
 
@@ -20,6 +21,14 @@ export default function Page() {
         label={"Hrady"}
         onClick={() => alert("Hrady!!!")}
       />
+      <h1>NavHeader</h1>
+      <div
+        style={{
+          maxWidth: "800px",
+        }}
+      >
+        <NavHeader title={"Hrady"} onBack={() => alert("Ne hrady!!!")} />
+      </div>
     </div>
   );
 }

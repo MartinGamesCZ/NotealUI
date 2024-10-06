@@ -1,0 +1,20 @@
+{
+  "name": "nav-header",
+  "type": "registry:ui",
+  "registryDependencies": [],
+  "dependencies": [
+    "react-icons"
+  ],
+  "devDependencies": [],
+  "tailwind": {
+    "config": {}
+  },
+  "cssVars": {},
+  "files": [
+    {
+      "path": "nav-header.tsx",
+      "type": "registry:ui",
+      "content": "import { TbChevronLeft } from \"react-icons/tb\";\n\nexport default function NavHeader({\n  backIcon,\n  title,\n  onBack,\n}: {\n  backIcon?: (...props: any) => JSX.Element;\n  title: string;\n  onBack: () => void;\n}) {\n  const BackIcon = backIcon || TbChevronLeft;\n\n  return (\n    <div className={\"flex justify-between items-center flex-row\"}>\n      <div\n        className=\"p-2 rounded-md hover:bg-accent group transition-colors duration-200 cursor-pointer\"\n        onClick={onBack}\n      >\n        <BackIcon\n          size={28}\n          className=\"text-foreground/90 group-hover:text-foreground transition-colors duration-200\"\n        />\n      </div>\n      <p className=\"pb-1\">{title}</p>\n      <div className=\"w-11\"></div>\n    </div>\n  );\n}\n"
+    }
+  ]
+}
