@@ -1,0 +1,20 @@
+{
+  "name": "place-card",
+  "type": "registry:ui",
+  "registryDependencies": [],
+  "dependencies": [
+    "next"
+  ],
+  "devDependencies": [],
+  "tailwind": {
+    "config": {}
+  },
+  "cssVars": {},
+  "files": [
+    {
+      "path": "place-card.tsx",
+      "type": "registry:ui",
+      "content": "import Image from \"next/image\";\r\n\r\ninterface PlaceCardProps {\r\n    title: string;\r\n    description: string;\r\n    images: string[],\r\n    city: string,\r\n    category: string\r\n}\r\n\r\nexport default function PlaceCard({ title, description, images, city, category }: PlaceCardProps) {\r\n    return <div className={\"flex flex-col justify-center gap-2\"}>\r\n        <div className={\"flex flex-col justify-center\"}>\r\n            <h1 className={\"font-bold text-xl\"}>\r\n                {title}\r\n            </h1>\r\n            <p className=\"text-foreground/60 pb-1\">{category} • {city}</p>\r\n            <p>{description}</p>\r\n        </div>\r\n        <div className={\"flex flex-row gap-2\"}>\r\n            {images.map((i) => (\r\n                <div className={\"rounded-md overflow-hidden\"}>\r\n                    <Image src={i} width={512} height={512} alt={\"\"} />\r\n                </div>\r\n            ))}\r\n        </div>\r\n    </div>\r\n}"
+    }
+  ]
+}

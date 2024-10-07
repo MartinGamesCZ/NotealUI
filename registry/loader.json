@@ -12,7 +12,7 @@
     {
       "path": "loader.tsx",
       "type": "registry:ui",
-      "content": "export type LoaderSize = \"sm\" | \"md\" | \"lg\";\n\nconst sizes = {\n  sm: \"w-4 h-4\",\n  md: \"w-6 h-6\",\n  lg: \"w-8 h-8\",\n\n  borders: {\n    sm: \"border-2\",\n    md: \"border-4\",\n    lg: \"border-4\",\n  },\n};\n\nexport default function Loader({ size }: { size?: LoaderSize }) {\n  return (\n    <div className={sizes[size ?? \"md\"]}>\n      <div\n        className={\n          sizes[size ?? \"md\"] +\n          \" \" +\n          sizes.borders[size ?? \"md\"] +\n          \" border-l-primary border-t-primary border-r-accent border-b-accent rounded-full animate-spin\"\n        }\n      ></div>\n    </div>\n  );\n}\n"
+      "content": "export type LoaderSize = \"sm\" | \"md\" | \"lg\";\r\n\r\nconst sizes = {\r\n  sm: \"w-4 h-4\",\r\n  md: \"w-6 h-6\",\r\n  lg: \"w-8 h-8\",\r\n\r\n  borders: {\r\n    sm: \"border-2\",\r\n    md: \"border-4\",\r\n    lg: \"border-4\",\r\n  },\r\n};\r\n\r\nexport default function Loader({ size }: { size?: LoaderSize }) {\r\n  return (\r\n    <div className={sizes[size ?? \"md\"]}>\r\n      <div\r\n        className={\r\n          sizes[size ?? \"md\"] +\r\n          \" \" +\r\n          sizes.borders[size ?? \"md\"] +\r\n          \" border-l-primary border-t-primary border-r-accent border-b-accent rounded-full animate-spin\"\r\n        }\r\n      ></div>\r\n    </div>\r\n  );\r\n}\r\n"
     }
   ]
 }
